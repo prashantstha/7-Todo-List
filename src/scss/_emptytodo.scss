@@ -1,0 +1,18 @@
+.empty-card {
+    background-color: rgba(#000000, 0.6);
+    border-radius: 5px;
+    padding: 30px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    color: #ffffff;
+    .icon-wrapper {
+        font-size: 80px;
+    }
+    h2 {
+        margin-top: 0;
+    }
+    p {
+        font-size: 12px;
+    }
+}

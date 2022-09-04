@@ -1,0 +1,129 @@
+.list-wrapper {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        background: #ffffff;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        padding: 10px 10px 10px 15px;
+        h3 {
+            margin: 0;
+            margin-right: 15px;
+            font-size: 14px;
+            font-weight: 500;
+            width: calc(100% - 135px);
+        }
+        button {
+            border: none;
+            font-size: 24px;
+            line-height: 0;
+            padding: 5px;
+            background: none;
+        }
+        .important {
+            display: inline-block;
+            vertical-align: middle;
+            color: gray;
+            &.is-important {
+                color: lighten(orange, 10);
+            }
+        }
+        .action {
+            margin-left: auto;
+            button {
+                
+                &:first-child {
+                    margin-left: 0;
+                }
+                &.edit {
+                    color: darken(lightblue, 40);
+                }
+                &.delet {
+                    color: lighten(red, 10);
+                }
+            }
+        }
+    }
+}
+
+/* Customize the label (the checkbox-wrapper) */
+.checkbox-wrapper {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: -6px;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        background-color: transparent;
+        border: 2px solid gray;
+      }
+      &:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+      
+
+      input:checked ~ .checkmark {
+        background-color: gray;
+      }
+      
+
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      
+
+      input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .checkmark:after {
+        left: 7px;
+        top: 3px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+  }
+
+  .completed {
+    background-color: darken(skyblue, 5);
+    border-radius: 3px;
+    display: inline-block;
+    padding: 7px 15px;
+    &-list li {
+        h3 {
+            text-decoration: line-through;
+            color: gray;
+        }
+    }
+  }

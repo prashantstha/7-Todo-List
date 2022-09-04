@@ -1,0 +1,11 @@
+.alert {
+    padding: 10px 15px;
+    border-radius: 3px;
+    &-success {
+        background-color: lighten(green, 40);
+    }
+    &-danger {
+        background-color: lighten(red, 30);
+
+    }
+}

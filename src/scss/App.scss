@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+*{
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+button {
+  cursor: pointer;
+}
+@import 'alert';
+@import 'date';
+@import 'list';
+@import 'emptytodo';
+.App {
+  background-image: url(images/bg.jpg);
+  background-color: antiquewhite;
+  background-size: cover;
+  padding: 50px 20px;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+  overflow-y: auto;
+
+  @media (min-width: 991px) {
+    padding: 50px;
+  }
+  
+}
+
+.title {
+  margin-bottom: 70px;
+  h1 {
+    position: relative;
+    margin: 0;
+    color: white;
+   }
+}
+.form-control {
+  margin-top: 30px;
+  
+  input, .submit-btn {
+    background: #ffffff;
+    border-radius: 3px;
+    padding: 15px;
+    border: 0px;
+    font-size: 14px;
+    &:focus {
+      outline: none;
+    }
+  }
+  input {
+    width: calc(100% - 100px - 15px);
+  }
+  .submit-btn {
+    background-color: darken(skyblue, 5);
+    margin-left: 15px;
+    width: 100px;
+  }
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 auto;
+  @media (min-width: 991px) {
+    max-width: 80%;
+  }
+}
+
+.clear-btn {
+  background-color: lighten(red, 10);
+  border-radius: 3px;
+  padding: 15px;
+  border: 0px;
+  font-size: 14px;
+  color: white;
+
+}
